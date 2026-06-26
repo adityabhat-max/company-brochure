@@ -180,7 +180,8 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .care-col.post .care-bullet { background:#42a5f5; }
 
   /* === ISAAC Company Pages CSS (scoped) === */
-  .ipp { --gold: #c8a45e; --soft-gray: #8a8a8a; }
+    .ipp *, .ipp *::before, .ipp *::after { margin: 0; padding: 0; box-sizing: border-box; }
+.ipp { --gold: #c8a45e; --soft-gray: #8a8a8a; }
   .ipp .page { width: 210mm; min-height: auto; margin: 0.625rem auto; background: #fdf0f2; position: relative; overflow: hidden; box-shadow: 0 0.25rem 1.875rem rgba(0,0,0,0.15); page-break-after: always; }
   .ipp .top-banner { background: #0a1628; display: flex; justify-content: center; gap: 1.125rem; padding: 0.5rem 1.25rem; flex-wrap: nowrap; overflow: hidden; }
   .ipp .top-badge { display: flex; align-items: center; gap: 0.375rem; color: #ffffff; font-size: 0.5938rem; letter-spacing: 0.09375rem; text-transform: uppercase; font-weight: 500; }
