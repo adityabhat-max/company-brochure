@@ -26,12 +26,12 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   page-break-after: always; page-break-inside: avoid;
 }
 
-/* âââ TOP BAR âââ */
+/* TOP BAR */
 .tb { display:flex; justify-content:center; gap:20px; padding:10px 30px; background:var(--navy); }
 .tb-i { display:flex; align-items:center; gap:6px; font-size:7.5px; color:var(--lg); letter-spacing:1.5px; text-transform:uppercase; font-weight:500; }
 .tb-d { width:5px; height:5px; background:var(--gd); transform:rotate(45deg); }
 
-/* âââ SECTION HEADER HERO âââ */
+/* SECTION HEADER HERO */
 .sh { position:relative; height:200px; overflow:hidden; }
 .sh img { width:100%; height:100%; object-fit:cover; }
 .sh-ov { position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,22,40,.7),rgba(10,22,40,.85)); }
@@ -39,7 +39,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .sl { font-size:9px; letter-spacing:4px; color:var(--gd); text-transform:uppercase; font-weight:500; margin-bottom:8px; }
 .st { font-family:'Playfair Display',serif; font-size:32px; color:#fff; font-weight:600; }
 
-/* âââ COVER PAGE âââ */
+/* COVER PAGE */
 .cover { background: linear-gradient(135deg, #fdf4f5 0%, #faf0f1 40%, #fdf4f5 100%); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:50px; }
 .cover-corner { position:absolute; width:60px; height:60px; border:1.5px solid var(--gd); }
 .cover-corner.tl { top:30px; left:30px; border-right:none; border-bottom:none; }
@@ -60,7 +60,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .cover-badge-item .num { font-family:'Playfair Display',serif; font-size:28px; color:var(--gd); font-weight:600; }
 .cover-badge-item .lbl { font-size:7px; letter-spacing:2px; color:var(--text-light); text-transform:uppercase; margin-top:2px; }
 
-/* âââ INTRO PAGE âââ */
+/* INTRO PAGE */
 .intro-body { padding:35px 45px; }
 .intro-heading { font-family:'Playfair Display',serif; font-size:26px; color:var(--navy); font-weight:600; margin-bottom:15px; text-align:center; }
 .intro-text { font-size:11.5px; color:var(--text); line-height:1.85; text-align:justify; }
@@ -68,14 +68,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .intro-highlight { background:linear-gradient(135deg, var(--soft-pink), var(--cream)); border-left:3px solid var(--gd); padding:18px 22px; border-radius:0 10px 10px 0; margin:20px 0; }
 .intro-highlight p { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--navy); line-height:1.7; font-style:italic; margin:0; }
 
-/* âââ STATS ROW âââ */
+/* STATS ROW */
 .stats-row { display:flex; gap:0; margin:25px 0; }
 .stat-card { flex:1; text-align:center; padding:22px 10px; position:relative; }
 .stat-card:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:linear-gradient(180deg,transparent,var(--gd),transparent); }
 .stat-num { font-family:'Playfair Display',serif; font-size:34px; color:var(--gd); font-weight:700; }
 .stat-lbl { font-size:8px; letter-spacing:2px; color:var(--text-light); text-transform:uppercase; margin-top:4px; line-height:1.4; }
 
-/* âââ HOW IT WORKS âââ */
+/* HOW IT WORKS */
 .how-body { padding:30px 45px; }
 .how-title { font-family:'Playfair Display',serif; font-size:24px; color:var(--navy); text-align:center; margin-bottom:8px; }
 .how-sub { font-size:10px; color:var(--text-light); text-align:center; letter-spacing:2px; text-transform:uppercase; margin-bottom:25px; }
@@ -87,14 +87,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .tech-card h4 { font-family:'Playfair Display',serif; font-size:15px; color:var(--navy); margin-bottom:6px; }
 .tech-card p { font-size:10px; color:var(--text-light); line-height:1.7; }
 
-/* âââ PROCESS STEPS âââ */
+/* PROCESS STEPS */
 .process-steps { display:flex; flex-direction:column; gap:16px; }
 .step { display:flex; align-items:flex-start; gap:16px; padding:16px 20px; background:#fff; border-radius:10px; border:1px solid rgba(200,164,94,.1); }
 .step-num { width:36px; height:36px; min-width:36px; background:linear-gradient(135deg,var(--gd),var(--rose)); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:16px; color:#fff; font-weight:600; }
 .step h4 { font-size:12px; color:var(--navy); font-weight:600; margin-bottom:3px; }
 .step p { font-size:10px; color:var(--text-light); line-height:1.6; }
 
-/* âââ BROW STYLES âââ */
+/* BROW STYLES */
 .areas-body { padding:30px 40px; }
 .areas-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:20px; }
 .area-card { background:#fff; border-radius:14px; padding:24px 16px; text-align:center; overflow:hidden; border:1px solid rgba(200,164,94,.12); }
@@ -103,7 +103,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .area-card h4 { font-family:'Playfair Display',serif; font-size:13px; color:var(--navy); margin-bottom:5px; }
 .area-card p { font-size:9px; color:var(--text-light); line-height:1.5; }
 
-/* âââ WHY CHOOSE âââ */
+/* WHY CHOOSE */
 .why-body { padding:30px 45px; }
 .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
 .why-card { display:flex; gap:14px; align-items:flex-start; padding:18px; background:#fff; border-radius:10px; border:1px solid rgba(200,164,94,.1); }
@@ -111,7 +111,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .why-card h4 { font-size:11.5px; color:var(--navy); font-weight:600; margin-bottom:4px; }
 .why-card p { font-size:9.5px; color:var(--text-light); line-height:1.6; }
 
-/* âââ RESULTS âââ */
+/* RESULTS */
 .ba-body { padding:30px 45px; }
 .ba-note { background:linear-gradient(135deg,var(--soft-pink),var(--cream)); padding:20px 25px; border-radius:12px; border:1px solid rgba(200,164,94,.15); margin-top:20px; }
 .ba-note p { font-size:11px; color:var(--text); line-height:1.8; }
@@ -120,7 +120,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .result-item .r-num { font-family:'Playfair Display',serif; font-size:30px; color:var(--gd); font-weight:700; }
 .result-item .r-lbl { font-size:9px; color:var(--text-light); text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; line-height:1.4; }
 
-/* âââ DR PROFILE âââ */
+/* DR PROFILE */
 .exp-body { padding:30px 45px; }
 .exp-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
 .exp-card { padding:20px; background:linear-gradient(135deg,#fff,var(--cream)); border-radius:12px; border:1px solid rgba(200,164,94,.12); }
@@ -128,7 +128,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .exp-card h4 { font-family:'Playfair Display',serif; font-size:15px; color:var(--navy); margin-bottom:6px; }
 .exp-card p { font-size:10px; color:var(--text-light); line-height:1.7; }
 
-/* âââ COMPARISON âââ */
+/* COMPARISON */
 .comp-body { padding:30px 40px; }
 .comp-table { width:100%; border-collapse:separate; border-spacing:0; margin-top:20px; border-radius:12px; overflow:hidden; border:1px solid rgba(200,164,94,.15); }
 .comp-table th { background:var(--navy); color:var(--lg); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; padding:14px 16px; font-weight:500; text-align:left; }
@@ -138,7 +138,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .comp-check { color:var(--gd); font-weight:700; font-size:14px; }
 .comp-cross { color:#ccc; font-size:14px; }
 
-/* âââ FAQ âââ */
+/* FAQ */
 .faq-body { padding:30px 45px; }
 .faq-list { display:flex; flex-direction:column; gap:14px; margin-top:20px; }
 .faq-item { background:#fff; border-radius:10px; padding:18px 22px; border:1px solid rgba(200,164,94,.1); }
@@ -146,7 +146,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .faq-item h4::before { content:'Q. '; color:var(--gd); }
 .faq-item p { font-size:10px; color:var(--text-light); line-height:1.7; }
 
-/* âââ IDEAL CANDIDATE âââ */
+/* IDEAL CANDIDATE */
 .cand-body { padding:30px 45px; }
 .cand-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
 .cand-yes, .cand-no { padding:22px; border-radius:12px; }
@@ -158,7 +158,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .cand-item { display:flex; align-items:flex-start; gap:8px; margin-bottom:8px; font-size:10px; color:var(--text); line-height:1.6; }
 .cand-icon { min-width:16px; font-size:12px; margin-top:1px; }
 
-/* âââ TESTIMONIAL âââ */
+/* TESTIMONIAL */
 .test-body { padding:30px 45px; }
 .test-grid { display:flex; flex-direction:column; gap:16px; margin-top:20px; }
 .test-card { background:#fff; border-radius:12px; padding:22px 24px; border:1px solid rgba(200,164,94,.1); position:relative; }
@@ -166,7 +166,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .test-card p { font-family:'Cormorant Garamond',serif; font-size:13px; color:var(--text); line-height:1.8; font-style:italic; padding-left:28px; }
 .test-auth { font-family:'Montserrat',sans-serif; font-size:8px; color:var(--gd); font-style:normal; font-weight:600; margin-top:8px; letter-spacing:1.5px; text-transform:uppercase; padding-left:28px; }
 
-/* âââ PRE/POST CARE âââ */
+/* PRE/POST CARE */
 .care-body { padding:30px 45px; }
 .care-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px; }
 .care-col { padding:22px; border-radius:12px; }
@@ -180,7 +180,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .care-col.pre .care-bullet { background:#4caf50; }
 .care-col.post .care-bullet { background:#42a5f5; }
 
-/* âââ SESSIONS TIMELINE âââ */
+/* SESSIONS TIMELINE */
 .sessions-body { padding:30px 45px; }
 .sessions-timeline { position:relative; margin-top:25px; padding-left:30px; }
 .sessions-timeline::before { content:''; position:absolute; left:12px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,var(--gd),var(--rose)); }
@@ -228,9 +228,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 </head>
 <body>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 1 — COVER -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg cover">
   <div class="cover-corner tl"></div>
   <div class="cover-corner tr"></div>
@@ -269,9 +269,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 2 — WHAT IS MICROBLADING -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -325,9 +325,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 3 — HOW IT WORKS / TECHNIQUE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -382,9 +382,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 4 — STEP-BY-STEP PROCEDURE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -453,9 +453,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 5 — BROW STYLES OFFERED -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -536,9 +536,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 6 — RESULTS & LONGEVITY -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -599,9 +599,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 7 — DR. GEETIKA MITTAL GUPTA -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -665,9 +665,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 8 — IDEAL CANDIDATE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -690,24 +690,24 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 
   <div class="cand-grid">
   <div class="cand-yes">
-  <div class="cand-title">â Great Candidates</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Sparse, thin, or over-plucked eyebrows</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Uneven or asymmetric brow shape</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Those tired of filling brows daily</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Normal, dry, or combination skin types</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Clients with alopecia or brow hair loss</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Active individuals or frequent swimmers</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Brides and professionals seeking effortless beauty</div>
+  <div class="cand-title"> Great Candidates</div>
+  <div class="cand-item"><span class="cand-icon"></span>Sparse, thin, or over-plucked eyebrows</div>
+  <div class="cand-item"><span class="cand-icon"></span>Uneven or asymmetric brow shape</div>
+  <div class="cand-item"><span class="cand-icon"></span>Those tired of filling brows daily</div>
+  <div class="cand-item"><span class="cand-icon"></span>Normal, dry, or combination skin types</div>
+  <div class="cand-item"><span class="cand-icon"></span>Clients with alopecia or brow hair loss</div>
+  <div class="cand-item"><span class="cand-icon"></span>Active individuals or frequent swimmers</div>
+  <div class="cand-item"><span class="cand-icon"></span>Brides and professionals seeking effortless beauty</div>
   </div>
   <div class="cand-no">
-  <div class="cand-title">â Not Recommended For</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Pregnant or breastfeeding individuals</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Active skin conditions (eczema, psoriasis in brow area)</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Those on blood thinners or Accutane</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Clients with keloid scarring tendency</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Extremely oily skin (powder brows recommended instead)</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Botox injections in brow area within 2 weeks</div>
-  <div class="cand-item"><span class="cand-icon">â</span>Recent chemical peels or laser treatments</div>
+  <div class="cand-title"> Not Recommended For</div>
+  <div class="cand-item"><span class="cand-icon"></span>Pregnant or breastfeeding individuals</div>
+  <div class="cand-item"><span class="cand-icon"></span>Active skin conditions (eczema, psoriasis in brow area)</div>
+  <div class="cand-item"><span class="cand-icon"></span>Those on blood thinners or Accutane</div>
+  <div class="cand-item"><span class="cand-icon"></span>Clients with keloid scarring tendency</div>
+  <div class="cand-item"><span class="cand-icon"></span>Extremely oily skin (powder brows recommended instead)</div>
+  <div class="cand-item"><span class="cand-icon"></span>Botox injections in brow area within 2 weeks</div>
+  <div class="cand-item"><span class="cand-icon"></span>Recent chemical peels or laser treatments</div>
   </div>
   </div>
 
@@ -717,9 +717,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 9 — PRE & POST CARE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -742,7 +742,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 
   <div class="care-cols">
   <div class="care-col pre">
-  <h3>â¦ Before Your Session</h3>
+  <h3> Before Your Session</h3>
   <div class="care-item"><div class="care-bullet"></div>Avoid alcohol, caffeine, or blood thinners 24 hours before your appointment.</div>
   <div class="care-item"><div class="care-bullet"></div>Do not wax, thread, or tint brows for at least one week prior.</div>
   <div class="care-item"><div class="care-bullet"></div>Discontinue Retin-A, AHA, or glycolic acid products near the brow area 2 weeks before.</div>
@@ -752,7 +752,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <div class="care-item"><div class="care-bullet"></div>Arrive with brows drawn in your preferred shape if possible — this helps guide your specialist.</div>
   </div>
   <div class="care-col post">
-  <h3>â¦ After Your Session</h3>
+  <h3> After Your Session</h3>
   <div class="care-item"><div class="care-bullet"></div>Do not get brows wet for the first 7–10 days (no swimming, saunas, or steam).</div>
   <div class="care-item"><div class="care-bullet"></div>Gently cleanse the area morning and night with a mild, fragrance-free cleanser after day 2.</div>
   <div class="care-item"><div class="care-bullet"></div>Apply the provided aftercare ointment with a clean cotton swab — do not over-apply.</div>
@@ -769,9 +769,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 10 — WHY ISAAC LUXE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -844,9 +844,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 11 — COMPARISON TABLE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -880,49 +880,49 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <tbody>
   <tr>
   <td><strong>Natural Appearance</strong></td>
-  <td><span class="comp-check">â</span> Ultra-realistic hair strokes</td>
+  <td><span class="comp-check"></span> Ultra-realistic hair strokes</td>
   <td><span class="comp-cross">—</span> Drawn-on look</td>
-  <td><span class="comp-cross">â</span> Often unnatural block colour</td>
+  <td><span class="comp-cross"></span> Often unnatural block colour</td>
   </tr>
   <tr>
   <td><strong>Longevity</strong></td>
-  <td><span class="comp-check">â</span> 12–18 months</td>
-  <td><span class="comp-cross">â</span> Wears off same day</td>
-  <td><span class="comp-check">â</span> Permanent (but fades poorly)</td>
+  <td><span class="comp-check"></span> 12–18 months</td>
+  <td><span class="comp-cross"></span> Wears off same day</td>
+  <td><span class="comp-check"></span> Permanent (but fades poorly)</td>
   </tr>
   <tr>
   <td><strong>Customisation</strong></td>
-  <td><span class="comp-check">â</span> 100% bespoke per client</td>
-  <td><span class="comp-check">â</span> Daily variation possible</td>
+  <td><span class="comp-check"></span> 100% bespoke per client</td>
+  <td><span class="comp-check"></span> Daily variation possible</td>
   <td><span class="comp-cross">—</span> Fixed once done</td>
   </tr>
   <tr>
   <td><strong>Waterproof / Sweat-Proof</strong></td>
-  <td><span class="comp-check">â</span> Fully water and sweat resistant</td>
-  <td><span class="comp-cross">â</span> Smudges easily</td>
-  <td><span class="comp-check">â</span> Permanent</td>
+  <td><span class="comp-check"></span> Fully water and sweat resistant</td>
+  <td><span class="comp-cross"></span> Smudges easily</td>
+  <td><span class="comp-check"></span> Permanent</td>
   </tr>
   <tr>
   <td><strong>Reversibility</strong></td>
-  <td><span class="comp-check">â</span> Fades naturally over time</td>
-  <td><span class="comp-check">â</span> Washes off daily</td>
-  <td><span class="comp-cross">â</span> Requires laser removal</td>
+  <td><span class="comp-check"></span> Fades naturally over time</td>
+  <td><span class="comp-check"></span> Washes off daily</td>
+  <td><span class="comp-cross"></span> Requires laser removal</td>
   </tr>
   <tr>
   <td><strong>Daily Maintenance</strong></td>
-  <td><span class="comp-check">â</span> Zero daily effort required</td>
-  <td><span class="comp-cross">â</span> Daily application needed</td>
-  <td><span class="comp-check">â</span> No daily effort</td>
+  <td><span class="comp-check"></span> Zero daily effort required</td>
+  <td><span class="comp-cross"></span> Daily application needed</td>
+  <td><span class="comp-check"></span> No daily effort</td>
   </tr>
   <tr>
   <td><strong>Colour Accuracy Over Time</strong></td>
-  <td><span class="comp-check">â</span> Fades gracefully, true to tone</td>
-  <td><span class="comp-check">â</span> Consistent each application</td>
-  <td><span class="comp-cross">â</span> Can turn blue or red with age</td>
+  <td><span class="comp-check"></span> Fades gracefully, true to tone</td>
+  <td><span class="comp-check"></span> Consistent each application</td>
+  <td><span class="comp-cross"></span> Can turn blue or red with age</td>
   </tr>
   <tr>
   <td><strong>Medically Supervised</strong></td>
-  <td><span class="comp-check">â</span> Yes — ISAAC Luxe standard</td>
+  <td><span class="comp-check"></span> Yes — ISAAC Luxe standard</td>
   <td><span class="comp-cross">—</span> Not applicable</td>
   <td><span class="comp-cross">—</span> Rarely</td>
   </tr>
@@ -931,9 +931,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 12 — FAQ -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -981,9 +981,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 13 — TESTIMONIALS -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>Semi-Permanent Beauty</div>
@@ -1023,7 +1023,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 14 — CONTACT / LAST PAGE -->
 <div class="ipp">
 <!-- ==================== PAGE - JHARNA DHAR - CEO ==================== -->

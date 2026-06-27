@@ -27,12 +27,12 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   page-break-after: always; page-break-inside: avoid;
 }
 
-/* âââ TOP BAR âââ */
+/* TOP BAR */
 .tb { display:flex; justify-content:center; gap:20px; padding:10px 30px; background:var(--navy); }
 .tb-i { display:flex; align-items:center; gap:6px; font-size:7.5px; color:var(--lg); letter-spacing:1.5px; text-transform:uppercase; font-weight:500; }
 .tb-d { width:5px; height:5px; background:var(--gd); transform:rotate(45deg); }
 
-/* âââ SECTION HEADER HERO âââ */
+/* SECTION HEADER HERO */
 .sh { position:relative; height:200px; overflow:hidden; }
 .sh img { width:100%; height:100%; object-fit:cover; }
 .sh-ov { position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,22,40,.7),rgba(10,22,40,.85)); }
@@ -40,7 +40,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .sl { font-size:9px; letter-spacing:4px; color:var(--gd); text-transform:uppercase; font-weight:500; margin-bottom:8px; }
 .st { font-family:'Playfair Display',serif; font-size:32px; color:#fff; font-weight:600; }
 
-/* âââ COVER PAGE âââ */
+/* COVER PAGE */
 .cover { background: linear-gradient(135deg, #fdf4f5 0%, #faf0f1 40%, #fdf4f5 100%); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:50px; }
 .cover-corner { position:absolute; width:60px; height:60px; border:1.5px solid var(--gd); }
 .cover-corner.tl { top:30px; left:30px; border-right:none; border-bottom:none; }
@@ -61,7 +61,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .cover-badge-item .num { font-family:'Playfair Display',serif; font-size:28px; color:var(--gd); font-weight:600; }
 .cover-badge-item .lbl { font-size:7px; letter-spacing:2px; color:var(--text-light); text-transform:uppercase; margin-top:2px; }
 
-/* âââ INTRO PAGE âââ */
+/* INTRO PAGE */
 .intro-body { padding:35px 45px; }
 .intro-heading { font-family:'Playfair Display',serif; font-size:26px; color:var(--navy); font-weight:600; margin-bottom:15px; text-align:center; }
 .intro-text { font-size:11.5px; color:var(--text); line-height:1.85; text-align:justify; }
@@ -69,14 +69,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .intro-highlight { background:linear-gradient(135deg, var(--soft-pink), var(--cream)); border-left:3px solid var(--gd); padding:18px 22px; border-radius:0 10px 10px 0; margin:20px 0; }
 .intro-highlight p { font-family:'Cormorant Garamond',serif; font-size:15px; color:var(--navy); line-height:1.7; font-style:italic; margin:0; }
 
-/* âââ STATS ROW âââ */
+/* STATS ROW */
 .stats-row { display:flex; gap:0; margin:25px 0; }
 .stat-card { flex:1; text-align:center; padding:22px 10px; position:relative; }
 .stat-card:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:linear-gradient(180deg,transparent,var(--gd),transparent); }
 .stat-num { font-family:'Playfair Display',serif; font-size:34px; color:var(--gd); font-weight:700; }
 .stat-lbl { font-size:8px; letter-spacing:2px; color:var(--text-light); text-transform:uppercase; margin-top:4px; line-height:1.4; }
 
-/* âââ HOW IT WORKS âââ */
+/* HOW IT WORKS */
 .how-body { padding:30px 45px; }
 .how-title { font-family:'Playfair Display',serif; font-size:24px; color:var(--navy); text-align:center; margin-bottom:8px; }
 .how-sub { font-size:10px; color:var(--text-light); text-align:center; letter-spacing:2px; text-transform:uppercase; margin-bottom:25px; }
@@ -88,14 +88,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .tech-card h4 { font-family:'Playfair Display',serif; font-size:15px; color:var(--navy); margin-bottom:6px; }
 .tech-card p { font-size:10px; color:var(--text-light); line-height:1.7; }
 
-/* âââ PROCESS STEPS âââ */
+/* PROCESS STEPS */
 .process-steps { display:flex; flex-direction:column; gap:16px; }
 .step { display:flex; align-items:flex-start; gap:16px; padding:16px 20px; background:#fff; border-radius:10px; border:1px solid rgba(200,164,94,.1); }
 .step-num { width:36px; height:36px; min-width:36px; background:linear-gradient(135deg,var(--gd),var(--rose)); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:16px; color:#fff; font-weight:600; }
 .step h4 { font-size:12px; color:var(--navy); font-weight:600; margin-bottom:3px; }
 .step p { font-size:10px; color:var(--text-light); line-height:1.6; }
 
-/* âââ TREATMENT AREAS âââ */
+/* TREATMENT AREAS */
 .areas-body { padding:30px 40px; }
 .areas-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; margin-top:20px; }
 .area-card { background:#fff; border-radius:14px; padding:24px 16px; text-align:center; overflow:hidden; border:1px solid rgba(200,164,94,.12); transition:transform .2s; }
@@ -105,7 +105,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .area-card h4 { font-family:'Playfair Display',serif; font-size:13px; color:var(--navy); margin-bottom:5px; }
 .area-card p { font-size:9px; color:var(--text-light); line-height:1.5; }
 
-/* âââ WHY CHOOSE âââ */
+/* WHY CHOOSE */
 .why-body { padding:30px 45px; }
 .why-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
 .why-card { display:flex; gap:14px; align-items:flex-start; padding:18px; background:#fff; border-radius:10px; border:1px solid rgba(200,164,94,.1); }
@@ -113,7 +113,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .why-card h4 { font-size:11.5px; color:var(--navy); font-weight:600; margin-bottom:4px; }
 .why-card p { font-size:9.5px; color:var(--text-light); line-height:1.6; }
 
-/* âââ BEFORE/AFTER âââ */
+/* BEFORE/AFTER */
 .ba-body { padding:30px 45px; }
 .ba-note { background:linear-gradient(135deg,var(--soft-pink),var(--cream)); padding:20px 25px; border-radius:12px; border:1px solid rgba(200,164,94,.15); margin-top:20px; }
 .ba-note p { font-size:11px; color:var(--text); line-height:1.8; }
@@ -122,7 +122,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .result-item .r-num { font-family:'Playfair Display',serif; font-size:30px; color:var(--gd); font-weight:700; }
 .result-item .r-lbl { font-size:9px; color:var(--text-light); text-transform:uppercase; letter-spacing:1.5px; margin-top:4px; line-height:1.4; }
 
-/* âââ EXPERIENCE PAGE âââ */
+/* EXPERIENCE PAGE */
 .exp-body { padding:30px 45px; }
 .exp-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
 .exp-card { padding:20px; background:linear-gradient(135deg,#fff,var(--cream)); border-radius:12px; border:1px solid rgba(200,164,94,.12); }
@@ -130,7 +130,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .exp-card h4 { font-family:'Playfair Display',serif; font-size:15px; color:var(--navy); margin-bottom:6px; }
 .exp-card p { font-size:10px; color:var(--text-light); line-height:1.7; }
 
-/* âââ COMPARISON PAGE âââ */
+/* COMPARISON PAGE */
 .comp-body { padding:30px 40px; }
 .comp-table { width:100%; border-collapse:separate; border-spacing:0; margin-top:20px; border-radius:12px; overflow:hidden; border:1px solid rgba(200,164,94,.15); }
 .comp-table th { background:var(--navy); color:var(--lg); font-size:9px; letter-spacing:1.5px; text-transform:uppercase; padding:14px 16px; font-weight:500; text-align:left; }
@@ -140,7 +140,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .comp-check { color:var(--gd); font-weight:700; font-size:14px; }
 .comp-cross { color:#ccc; font-size:14px; }
 
-/* âââ FAQ PAGE âââ */
+/* FAQ PAGE */
 .faq-body { padding:30px 45px; }
 .faq-list { display:flex; flex-direction:column; gap:14px; margin-top:20px; }
 .faq-item { background:#fff; border-radius:10px; padding:18px 22px; border:1px solid rgba(200,164,94,.1); }
@@ -148,7 +148,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .faq-item h4::before { content:'Q. '; color:var(--gd); }
 .faq-item p { font-size:10px; color:var(--text-light); line-height:1.7; }
 
-/* âââ IDEAL CANDIDATE âââ */
+/* IDEAL CANDIDATE */
 .cand-body { padding:30px 45px; }
 .cand-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px; }
 .cand-yes, .cand-no { padding:22px; border-radius:12px; }
@@ -160,7 +160,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .cand-item { display:flex; align-items:flex-start; gap:8px; margin-bottom:8px; font-size:10px; color:var(--text); line-height:1.6; }
 .cand-icon { min-width:16px; font-size:12px; margin-top:1px; }
 
-/* âââ TESTIMONIAL âââ */
+/* TESTIMONIAL */
 .test-body { padding:30px 45px; }
 .test-grid { display:flex; flex-direction:column; gap:16px; margin-top:20px; }
 .test-card { background:#fff; border-radius:12px; padding:22px 24px; border:1px solid rgba(200,164,94,.1); position:relative; }
@@ -168,7 +168,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .test-card p { font-family:'Cormorant Garamond',serif; font-size:13px; color:var(--text); line-height:1.8; font-style:italic; padding-left:28px; }
 .test-auth { font-family:'Montserrat',sans-serif; font-size:8px; color:var(--gd); font-style:normal; font-weight:600; margin-top:8px; letter-spacing:1.5px; text-transform:uppercase; padding-left:28px; }
 
-/* âââ CTA / LAST PAGE âââ */
+/* CTA / LAST PAGE */
 .cta-page { background:linear-gradient(135deg,#fdf4f5 0%,#faf0f1 50%,#fdf4f5 100%); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:60px 50px; }
 .cta-heading { font-family:'Playfair Display',serif; font-size:36px; color:var(--navy); font-weight:600; margin-bottom:10px; }
 .cta-heading em { font-style:italic; color:var(--rose); }
@@ -181,7 +181,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .cta-locations { margin-top:25px; font-size:9px; color:var(--text-light); line-height:1.8; letter-spacing:1px; }
 .cta-social { margin-top:20px; font-size:9px; letter-spacing:2px; color:var(--gd); text-transform:uppercase; }
 
-/* âââ TREATMENT SESSIONS âââ */
+/* TREATMENT SESSIONS */
 .sessions-body { padding:30px 45px; }
 .sessions-timeline { position:relative; margin-top:25px; padding-left:30px; }
 .sessions-timeline::before { content:''; position:absolute; left:12px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,var(--gd),var(--rose)); }
@@ -190,7 +190,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .session-item h4 { font-family:'Playfair Display',serif; font-size:13px; color:var(--navy); margin-bottom:4px; }
 .session-item p { font-size:10px; color:var(--text-light); line-height:1.6; }
 
-/* âââ PRE/POST CARE âââ */
+/* PRE/POST CARE */
 .care-body { padding:30px 45px; }
 .care-cols { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px; }
 .care-col { padding:22px; border-radius:12px; }
@@ -245,9 +245,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 </head>
 <body>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 1 — COVER (LHR Brochure Style) -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg" style="background:linear-gradient(180deg,#fdf4f5 0%,#f8ece0 100%);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:50px 55px;position:relative;">
 
   <div style="position:absolute;top:50px;left:0;right:0;text-align:center;">
@@ -297,9 +297,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 2 — WHAT IS EMSCULPT NEO -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -349,9 +349,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 3 — HOW IT WORKS -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -421,9 +421,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 4 — TREATMENT AREAS -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -452,9 +452,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 5 — RESULTS & BEFORE/AFTER -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -515,9 +515,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 6 — DR. GEETIKA MITTAL GUPTA -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -559,7 +559,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <p style="font-size:9.5px;color:var(--text-light);line-height:1.6;">Attended numerous international workshops and conferences globally. Known for blending ancient and modern scientific techniques to deliver trusted results.</p>
   </div>
   <div style="padding:16px;background:#fff;border-radius:10px;border:1px solid rgba(200,164,94,.1);">
-  <h4 style="font-size:11px;color:var(--navy);font-weight:600;margin-bottom:4px;">â­ Celebrity Trusted</h4>
+  <h4 style="font-size:11px;color:var(--navy);font-weight:600;margin-bottom:4px;"> Celebrity Trusted</h4>
   <p style="font-size:9.5px;color:var(--text-light);line-height:1.6;">Go-to for Bollywood celebrities, fashion icons, social media influencers, and high-profile personalities across India.</p>
   </div>
   <div style="padding:16px;background:#fff;border-radius:10px;border:1px solid rgba(200,164,94,.1);">
@@ -593,9 +593,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 6B — WHY CHOOSE ISAAC LUXE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -680,9 +680,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 7 — COMPARISON -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -719,9 +719,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 8 — TREATMENT SESSIONS & PROTOCOL -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -784,9 +784,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 9 — IDEAL CANDIDATE & PRE/POST CARE -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -849,9 +849,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 10 — FAQs -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -899,9 +899,9 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE 11 — TESTIMONIALS -->
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <div class="pg">
   <div class="tb">
   <div class="tb-i"><div class="tb-d"></div>US FDA Approved</div>
@@ -943,7 +943,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 </div>
 
-<!-- âââââââââââââââââââââââââââââââââââââââââââ -->
+<!-- -->
 <!-- PAGE — LAST / CONTACT -->
 <div class="ipp">
 <!-- ==================== PAGE - JHARNA DHAR - CEO ==================== -->
