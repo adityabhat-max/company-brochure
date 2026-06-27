@@ -214,6 +214,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   .ipp .card h4 { font-family: 'Playfair Display', serif; font-size: 0.875rem; color: #0a1628; margin-bottom: 0.3125rem; font-weight: 600; }
   .ipp .card p { font-size: 0.6875rem; color: #8a8a8a; line-height: 1.6; }
   .ipp .cover-divider { width: 6.25rem; height: 0.0625rem; background: linear-gradient(90deg, #c8a45e, transparent); margin: 1.375rem 0; }
+
+/* Restored clean icons for comp-check / comp-cross / cand-icon */
+.comp-check:empty::before { content: "\2713"; }
+.comp-cross:empty::before { content: "\2717"; }
+.cand-yes .cand-icon:empty::before { content: "\2713"; color: #2e7d32; }
+.cand-no  .cand-icon:empty::before { content: "\2717"; color: #c62828; }
+.cand-yes .cand-title::before { content: "\2713\0020"; color: #2e7d32; font-weight:600; }
+.cand-no  .cand-title::before { content: "\2717\0020"; color: #c62828; font-weight:600; }
 </style>
 </head>
 <body>
@@ -341,7 +349,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
   </div>
   <h4>Hyaluronic Acid (HA) Fillers</h4>
-  <p>The gold standard in dermal fillers — JUVÃDERM and Restylane are HA-based fillers that hydrate, plump, and restore volume naturally. They are fully reversible and biodegradable, making them the safest and most versatile filler option available today.</p>
+  <p>The gold standard in dermal fillers — JUVÉDERM and Restylane are HA-based fillers that hydrate, plump, and restore volume naturally. They are fully reversible and biodegradable, making them the safest and most versatile filler option available today.</p>
   </div>
   <div class="tech-card">
   <div class="tech-icon">
@@ -404,7 +412,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <div class="step-num">2</div>
   <div>
   <h4>Filler Selection & Treatment Planning</h4>
-  <p>Based on your consultation, a bespoke treatment plan is created. The right filler product — whether JUVÃDERM, Restylane, or another premium brand — is selected for each target area based on the required density, flexibility, and longevity needed.</p>
+  <p>Based on your consultation, a bespoke treatment plan is created. The right filler product — whether JUVÉDERM, Restylane, or another premium brand — is selected for each target area based on the required density, flexibility, and longevity needed.</p>
   </div>
   </div>
   <div class="step">
@@ -470,7 +478,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
   <div style="padding:12px 14px 16px;">
   <h4>Lip Fillers</h4>
-  <p>Add volume, define the Cupid's bow, correct asymmetry, and achieve a natural, plump pout. JUVÃDERM fillers are used for beautiful, long-lasting lip enhancement lasting 3–6 months.</p>
+  <p>Add volume, define the Cupid's bow, correct asymmetry, and achieve a natural, plump pout. JUVÉDERM fillers are used for beautiful, long-lasting lip enhancement lasting 3–6 months.</p>
   </div>
   </div>
   <div class="area-card" style="padding:0;overflow:hidden;">
@@ -589,7 +597,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
 
   <div class="ba-note" style="margin-top:25px;">
-  <p><strong>After Your Session:</strong> Results are visible immediately, with full effects appearing within 2–3 days as minor swelling subsides and the filler settles naturally into the tissue. Mild bruising or tenderness at injection sites is normal and resolves within a few days. With proper aftercare and sun protection, results from JUVÃDERM last up to 12 months — and JUVÃDERM Voluma can last up to 2 years.</p>
+  <p><strong>After Your Session:</strong> Results are visible immediately, with full effects appearing within 2–3 days as minor swelling subsides and the filler settles naturally into the tissue. Mild bruising or tenderness at injection sites is normal and resolves within a few days. With proper aftercare and sun protection, results from JUVÉDERM last up to 12 months — and JUVÉDERM Voluma can last up to 2 years.</p>
   </div>
 
   <div style="margin-top:25px;">
@@ -601,7 +609,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
   <div style="text-align:center;padding:16px;background:linear-gradient(135deg,var(--soft-pink),#fff);border-radius:10px;border:1px solid rgba(200,164,94,.1);">
   <div style="font-family:'Playfair Display',serif;font-size:14px;color:var(--navy);font-weight:600;">Cheek & Mid-Face</div>
-  <div style="font-size:9px;color:var(--text-light);margin-top:4px;line-height:1.5;">6–12 months. JUVÃDERM Voluma in cheeks can last up to 2 years with optimal placement.</div>
+  <div style="font-size:9px;color:var(--text-light);margin-top:4px;line-height:1.5;">6–12 months. JUVÉDERM Voluma in cheeks can last up to 2 years with optimal placement.</div>
   </div>
   <div style="text-align:center;padding:16px;background:linear-gradient(135deg,var(--soft-pink),#fff);border-radius:10px;border:1px solid rgba(200,164,94,.1);">
   <div style="font-family:'Playfair Display',serif;font-size:14px;color:var(--navy);font-weight:600;">Jawline & Chin</div>
@@ -661,7 +669,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <div class="exp-card">
   <div class="exp-label">Safety First</div>
   <h4>US FDA-Approved Products Only</h4>
-  <p>At ISAAC Luxe, only US FDA-approved, clinically validated filler brands are used — including JUVÃDERM. Every injection is performed by a qualified or cosmetologist under strict medical protocols, ensuring your safety is never compromised.</p>
+  <p>At ISAAC Luxe, only US FDA-approved, clinically validated filler brands are used — including JUVÉDERM. Every injection is performed by a qualified or cosmetologist under strict medical protocols, ensuring your safety is never compromised.</p>
   </div>
   <div class="exp-card">
   <div class="exp-label">The ISAAC Luxe Promise</div>
@@ -703,7 +711,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 
   <div class="cand-grid">
   <div class="cand-yes">
-  <div class="cand-title"> Great Candidates</div>
+  <div class="cand-title">Great Candidates</div>
   <div class="cand-item"><span class="cand-icon"></span>Adults experiencing facial volume loss due to ageing</div>
   <div class="cand-item"><span class="cand-icon"></span>Those with thin or asymmetric lips seeking enhancement</div>
   <div class="cand-item"><span class="cand-icon"></span>Clients with hollow under-eyes or tired appearance</div>
@@ -713,7 +721,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <div class="cand-item"><span class="cand-icon"></span>Adults over 21 in good overall health</div>
   </div>
   <div class="cand-no">
-  <div class="cand-title"> Not Recommended For</div>
+  <div class="cand-title">Not Recommended For</div>
   <div class="cand-item"><span class="cand-icon"></span>Pregnant or breastfeeding individuals</div>
   <div class="cand-item"><span class="cand-icon"></span>Those with active skin infections near the treatment area</div>
   <div class="cand-item"><span class="cand-icon"></span>Clients with known allergy to hyaluronic acid or lidocaine</div>
@@ -822,7 +830,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   <div class="why-num">02</div>
   <div>
   <h4>US FDA-Approved Fillers Only</h4>
-  <p>We use only the gold-standard, US FDA-approved filler brands — including JUVÃDERM — renowned globally for their safety profile, natural feel, and long-lasting performance. No compromises, ever.</p>
+  <p>We use only the gold-standard, US FDA-approved filler brands — including JUVÉDERM — renowned globally for their safety profile, natural feel, and long-lasting performance. No compromises, ever.</p>
   </div>
   </div>
   <div class="why-card">
@@ -972,7 +980,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   </div>
   <div class="faq-item">
   <h4>How long do dermal filler results last?</h4>
-  <p>Results vary by treatment area and product used. Lip fillers typically last 3–6 months, cheek and mid-face fillers last 6–12 months, and structural fillers in the jawline and chin can last 12–18 months. JUVÃDERM Voluma in the cheeks can last up to 2 years. Touch-up sessions maintain results beautifully.</p>
+  <p>Results vary by treatment area and product used. Lip fillers typically last 3–6 months, cheek and mid-face fillers last 6–12 months, and structural fillers in the jawline and chin can last 12–18 months. JUVÉDERM Voluma in the cheeks can last up to 2 years. Touch-up sessions maintain results beautifully.</p>
   </div>
   <div class="faq-item">
   <h4>Are dermal fillers safe?</h4>
