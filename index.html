@@ -1,10 +1,314 @@
-﻿<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="refresh" content="0; url=company-brochure.html">
-  <title>ISAAC Luxe Company Brochure</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISAAC Luxe — Brochures</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a1628;
+      --navy2: #0e1e38;
+      --gd: #c8a45e;
+      --lg: #e4cc8f;
+      --white: #ffffff;
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Cormorant Garamond', serif;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 60px 30px 40px;
+      border-bottom: 1px solid rgba(200,164,94,0.25);
+    }
+
+    .brand-tag {
+      font-size: 9px;
+      letter-spacing: 5px;
+      color: var(--gd);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 14px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 6px;
+      line-height: 1.1;
+    }
+
+    .brand-sub {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gd);
+      text-transform: uppercase;
+      margin-top: 8px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 24px auto 0;
+      width: 200px;
+    }
+
+    .divider-line { flex: 1; height: 1px; background: var(--gd); opacity: 0.4; }
+    .divider-diamond {
+      width: 6px; height: 6px;
+      background: var(--gd);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ── Ticker bar ── */
+    .ticker {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 30px;
+      background: rgba(14,30,56,0.8);
+      border-bottom: 1px solid rgba(200,164,94,0.15);
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 7.5px;
+      color: #ffffff;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .ticker-dot {
+      width: 5px; height: 5px;
+      background: var(--gd);
+      transform: rotate(45deg);
+      flex-shrink: 0;
+    }
+
+    /* ── Section label ── */
+    .section-label {
+      text-align: center;
+      padding: 48px 20px 32px;
+    }
+
+    .section-label p {
+      font-size: 10px;
+      letter-spacing: 4px;
+      color: var(--gd);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-label h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: 2px;
+    }
+
+    /* ── Grid ── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+      background: rgba(200,164,94,0.12);
+    }
+
+    /* ── Card ── */
+    .card {
+      display: block;
+      text-decoration: none;
+      background: var(--navy);
+      padding: 36px 28px 32px;
+      position: relative;
+      transition: background 0.25s;
+      cursor: pointer;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1.5px solid transparent;
+      transition: border-color 0.25s;
+      pointer-events: none;
+    }
+
+    .card:hover { background: var(--navy2); }
+    .card:hover::before { border-color: rgba(200,164,94,0.5); }
+
+    .card-num {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--gd);
+      opacity: 0.6;
+      margin-bottom: 16px;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 1px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+      letter-spacing: 0.3px;
+    }
+
+    .card-arrow {
+      margin-top: 20px;
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: var(--gd);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+
+    .card-arrow::after {
+      content: '';
+      width: 20px;
+      height: 1px;
+      background: var(--gd);
+    }
+
+    .card:hover .card-arrow { opacity: 1; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid rgba(200,164,94,0.15);
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.3);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 680px) {
+      .grid { grid-template-columns: 1fr; padding: 0 0 40px; }
+      .brand-name { font-size: 30px; letter-spacing: 4px; }
+      .ticker { flex-wrap: wrap; gap: 12px; }
+    }
+
+    @media (min-width: 681px) and (max-width: 900px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting... <a href="company-brochure.html">Click here</a></p>
+
+  <header>
+    <div class="brand-tag">Luxury Aesthetic Medicine</div>
+    <div class="brand-name">ISAAC LUXE</div>
+    <div class="brand-sub">Treatment Brochures</div>
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-diamond"></div>
+      <div class="divider-line"></div>
+    </div>
+  </header>
+
+  <div class="ticker">
+    <div class="ticker-item"><div class="ticker-dot"></div>US FDA Approved</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Award Winning</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>Celebrity</div>
+    <div class="ticker-item"><div class="ticker-dot"></div>20K+ Clients</div>
+  </div>
+
+  <div class="section-label">
+    <p>Select a brochure</p>
+    <h2>Our Treatments</h2>
+  </div>
+
+  <div class="grid">
+
+    <a class="card" href="company-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">ISAAC Luxe</div>
+      <div class="card-desc">Our clinic, philosophy, and the full spectrum of luxury aesthetic services we offer.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+    <a class="card" href="aquagold-fine-touch.html">
+      <div class="card-num">02</div>
+      <div class="card-title">Aqua Gold Fine Touch</div>
+      <div class="card-desc">24-karat gold micro-channeling for radiant, glass-skin hydration and glow.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+    <a class="card" href="botox-treatment-brochure.html">
+      <div class="card-num">03</div>
+      <div class="card-title">Botox</div>
+      <div class="card-desc">Precision anti-wrinkle injections to smooth lines and restore a youthful expression.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+    <a class="card" href="carbon-facial-brochure.html">
+      <div class="card-num">04</div>
+      <div class="card-title">Carbon Facial</div>
+      <div class="card-desc">Laser carbon peel that deeply cleanses, tightens pores, and delivers instant luminosity.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+    <a class="card" href="dermal-fillers-brochure.html">
+      <div class="card-num">05</div>
+      <div class="card-title">Dermal Fillers</div>
+      <div class="card-desc">Sculpt, volumise, and contour with precision hyaluronic acid and collagen-stimulating fillers.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+    <a class="card" href="dermapen-4-brochure.html">
+      <div class="card-num">06</div>
+      <div class="card-title">Dermapen 4</div>
+      <div class="card-desc">Advanced microneedling that triggers the skin's natural collagen cascade for visible rejuvenation.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+    <a class="card" href="emface-treatment-brochure.html">
+      <div class="card-num">07</div>
+      <div class="card-title">Emface</div>
+      <div class="card-desc">Non-invasive facial lifting and muscle toning using synchronized RF and HIFES technology.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+
+  </div>
+
+  <footer>© ISAAC Luxe &nbsp;·&nbsp; isaac-luxe.co</footer>
+
 </body>
 </html>
