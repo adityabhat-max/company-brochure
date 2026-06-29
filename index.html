@@ -182,6 +182,80 @@
     .card-arrow::after { content: ''; width: 20px; height: 1px; background: var(--gd); }
     .card:hover .card-arrow { opacity: 1; }
 
+    /* ── Browse by Category ── */
+    .cat-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px 56px;
+    }
+
+    .cat-group {
+      margin-bottom: 36px;
+    }
+
+    .cat-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(200,164,94,0.12);
+      border-left: 3px solid var(--cc, #c8a45e);
+      padding-left: 12px;
+    }
+
+    .cat-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .cat-count {
+      font-size: 8px;
+      letter-spacing: 2.5px;
+      color: rgba(255,255,255,0.28);
+      text-transform: uppercase;
+      margin-left: auto;
+    }
+
+    .cat-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cat-card {
+      display: inline-block;
+      text-decoration: none;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(200,164,94,0.16);
+      border-top: 2px solid var(--cc, rgba(200,164,94,0.4));
+      border-radius: 3px;
+      padding: 10px 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14px;
+      letter-spacing: 0.4px;
+      color: rgba(255,255,255,0.75);
+      transition: background 0.2s, color 0.2s, transform 0.15s, border-color 0.2s;
+    }
+
+    .cat-card:hover {
+      background: rgba(200,164,94,0.09);
+      border-color: rgba(200,164,94,0.45);
+      border-top-color: var(--cc, #c8a45e);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .cat-divider {
+      height: 1px;
+      background: rgba(200,164,94,0.15);
+      max-width: 960px;
+      margin: 0 auto 0;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -222,9 +296,138 @@
     <div class="ticker-item"><div class="ticker-dot"></div>20K+ Clients</div>
   </div>
 
+  <!-- ══ BROWSE BY CATEGORY ══ -->
+  <div class="section-label">
+    <p>Find your treatment</p>
+    <h2>Browse by Category</h2>
+  </div>
+
+  <div class="cat-wrapper">
+
+    <div class="cat-group" style="--cc:#8B5CF6">
+      <div class="cat-header">
+        <span class="cat-name">Injectable</span>
+        <span class="cat-count">8 Treatments</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="botox-treatment-brochure.html">Botox</a>
+        <a class="cat-card" href="profhilo-brochure.html">Profhilo</a>
+        <a class="cat-card" href="dermal-fillers-brochure.html">Dermal Fillers</a>
+        <a class="cat-card" href="aquagold-fine-touch.html">Aquagold Fine Touch</a>
+        <a class="cat-card" href="thread-lift-brochure.html">Thread Lift</a>
+        <a class="cat-card" href="QR678-hair-science-brochure.html">QR678 Hair Science</a>
+        <a class="cat-card" href="polypeptide-brochure.html">Polypeptide</a>
+        <a class="cat-card" href="rejuran-brochure.html">Rejuran</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#F59E0B">
+      <div class="cat-header">
+        <span class="cat-name">Facial</span>
+        <span class="cat-count">5 Treatments</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="hydrafacial-md-elite-brocher.html">HydraFacial MD Elite</a>
+        <a class="cat-card" href="laser-toning-brochure.html">Laser Toning</a>
+        <a class="cat-card" href="keravive-brochure.html">Luxe Keravive</a>
+        <a class="cat-card" href="carbon-facial-brochure.html">Carbon Facial</a>
+        <a class="cat-card" href="photo-facial-brochure.html">Photo Facial</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#10B981">
+      <div class="cat-header">
+        <span class="cat-name">Body Contouring</span>
+        <span class="cat-count">3 Treatments</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="emsculpt-neo-brochure.html">Emsculpt NEO</a>
+        <a class="cat-card" href="lymphatic-drainage-brochure.html">Lymphatic Drainage</a>
+        <a class="cat-card" href="exilis-elite-brochure.html">Exilis Elite</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#F97316">
+      <div class="cat-header">
+        <span class="cat-name">Face Lifting</span>
+        <span class="cat-count">2 Treatments</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="ultherapy-treatment-brochure.html">Ultherapy</a>
+        <a class="cat-card" href="emface-treatment-brochure.html">EmFace</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#EF4444">
+      <div class="cat-header">
+        <span class="cat-name">Anti Aging</span>
+        <span class="cat-count">3 Treatments</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="morpheus-8-treatment-brochure.html">Morpheus 8</a>
+        <a class="cat-card" href="pink-treatment-brochure.html">Pink Treatment</a>
+        <a class="cat-card" href="dermapen-4-brochure.html">Dermapen 4</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#14B8A6">
+      <div class="cat-header">
+        <span class="cat-name">Anti Aging — Hair &amp; Scalp</span>
+        <span class="cat-count">1 Treatment</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="exosome-scalp-treatment-brochure.html">Exosome Scalp Treatment</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#3B82F6">
+      <div class="cat-header">
+        <span class="cat-name">Drip Therapy</span>
+        <span class="cat-count">1 Treatment</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="house-of-drips-brochure.html">House of Drips</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#EC4899">
+      <div class="cat-header">
+        <span class="cat-name">Microblading</span>
+        <span class="cat-count">1 Treatment</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="microblading-brochure.html">Microblading</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#84CC16">
+      <div class="cat-header">
+        <span class="cat-name">Peel</span>
+        <span class="cat-count">1 Treatment</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="house-of-peels-brochure.html">House of Peels</a>
+      </div>
+    </div>
+
+    <div class="cat-group" style="--cc:#06B6D4">
+      <div class="cat-header">
+        <span class="cat-name">Laser Hair Reduction</span>
+        <span class="cat-count">1 Treatment</span>
+      </div>
+      <div class="cat-cards">
+        <a class="cat-card" href="laser-hair-reduction-brochure.html">Laser Hair Reduction</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cat-divider"></div>
+
+  <!-- ══ ALL TREATMENTS ══ -->
   <div class="section-label">
     <p>Select a brochure</p>
-    <h2>Our Treatments</h2>
+    <h2>All Treatments</h2>
   </div>
 
   <div class="grid">
