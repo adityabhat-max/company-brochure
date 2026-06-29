@@ -183,77 +183,41 @@
     .card:hover .card-arrow { opacity: 1; }
 
     /* ── Browse by Category ── */
-    .cat-wrapper {
+    .cat-heading {
       max-width: 960px;
-      margin: 0 auto;
-      padding: 0 24px 56px;
-    }
-
-    .cat-group {
-      margin-bottom: 36px;
-    }
-
-    .cat-header {
+      margin: 40px auto 0;
+      padding: 0 24px 14px;
+      border-bottom: 1px solid rgba(200,164,94,0.2);
       display: flex;
       align-items: center;
-      gap: 10px;
-      margin-bottom: 14px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid rgba(200,164,94,0.12);
-      border-left: 3px solid var(--cc, #c8a45e);
-      padding-left: 12px;
+      gap: 12px;
     }
 
-    .cat-name {
+    .cat-heading::before {
+      content: '';
+      width: 3px;
+      height: 18px;
+      background: var(--gd);
+      flex-shrink: 0;
+    }
+
+    .cat-heading span {
       font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-
-    .cat-count {
-      font-size: 8px;
-      letter-spacing: 2.5px;
-      color: rgba(255,255,255,0.28);
+      font-size: 12px;
+      color: var(--gd);
+      letter-spacing: 4px;
       text-transform: uppercase;
-      margin-left: auto;
     }
 
-    .cat-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .cat-card {
-      display: inline-block;
-      text-decoration: none;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(200,164,94,0.16);
-      border-top: 2px solid var(--cc, rgba(200,164,94,0.4));
-      border-radius: 3px;
-      padding: 10px 16px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 14px;
-      letter-spacing: 0.4px;
-      color: rgba(255,255,255,0.75);
-      transition: background 0.2s, color 0.2s, transform 0.15s, border-color 0.2s;
-    }
-
-    .cat-card:hover {
-      background: rgba(200,164,94,0.09);
-      border-color: rgba(200,164,94,0.45);
-      border-top-color: var(--cc, #c8a45e);
-      color: #fff;
-      transform: translateY(-2px);
+    .cat-grid {
+      padding-bottom: 0;
     }
 
     .cat-divider {
       height: 1px;
       background: rgba(200,164,94,0.15);
       max-width: 960px;
-      margin: 0 auto 0;
+      margin: 0 auto;
     }
 
     footer {
@@ -302,124 +266,200 @@
     <h2>Browse by Category</h2>
   </div>
 
-  <div class="cat-wrapper">
+  <div class="cat-heading"><span>Injectable</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="botox-treatment-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Botox</div>
+      <div class="card-desc">Precision anti-wrinkle injections to smooth lines and restore a youthful expression.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="profhilo-brochure.html">
+      <div class="card-num">02</div>
+      <div class="card-title">Profhilo</div>
+      <div class="card-desc">Ultra-pure hyaluronic acid bio-remodelling that restores elasticity and deep skin hydration.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="dermal-fillers-brochure.html">
+      <div class="card-num">03</div>
+      <div class="card-title">Dermal Fillers</div>
+      <div class="card-desc">Sculpt, volumise, and contour with precision hyaluronic acid and collagen-stimulating fillers.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="aquagold-fine-touch.html">
+      <div class="card-num">04</div>
+      <div class="card-title">Aquagold Fine Touch</div>
+      <div class="card-desc">24-karat gold micro-channeling for radiant, glass-skin hydration and glow.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="thread-lift-brochure.html">
+      <div class="card-num">05</div>
+      <div class="card-title">Thread Lift</div>
+      <div class="card-desc">Dissolvable PDO threads for an instant non-surgical lift with long-lasting collagen stimulation.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="QR678-hair-science-brochure.html">
+      <div class="card-num">06</div>
+      <div class="card-title">QR678 Hair Science</div>
+      <div class="card-desc">Clinically proven growth-factor injection therapy to combat hair loss and stimulate regrowth.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="polypeptide-brochure.html">
+      <div class="card-num">07</div>
+      <div class="card-title">Polypeptide</div>
+      <div class="card-desc">Bioactive peptide infusion to accelerate cellular repair, boost collagen, and firm ageing skin.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="rejuran-brochure.html">
+      <div class="card-num">08</div>
+      <div class="card-title">Rejuran</div>
+      <div class="card-desc">Polynucleotide skin healer that repairs DNA damage, restores elasticity, and refines texture.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#8B5CF6">
-      <div class="cat-header">
-        <span class="cat-name">Injectable</span>
-        <span class="cat-count">8 Treatments</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="botox-treatment-brochure.html">Botox</a>
-        <a class="cat-card" href="profhilo-brochure.html">Profhilo</a>
-        <a class="cat-card" href="dermal-fillers-brochure.html">Dermal Fillers</a>
-        <a class="cat-card" href="aquagold-fine-touch.html">Aquagold Fine Touch</a>
-        <a class="cat-card" href="thread-lift-brochure.html">Thread Lift</a>
-        <a class="cat-card" href="QR678-hair-science-brochure.html">QR678 Hair Science</a>
-        <a class="cat-card" href="polypeptide-brochure.html">Polypeptide</a>
-        <a class="cat-card" href="rejuran-brochure.html">Rejuran</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Facial</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="hydrafacial-md-elite-brocher.html">
+      <div class="card-num">01</div>
+      <div class="card-title">HydraFacial MD Elite</div>
+      <div class="card-desc">The world's leading hydradermabrasion facial — cleanse, extract, and hydrate in one session.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="laser-toning-brochure.html">
+      <div class="card-num">02</div>
+      <div class="card-title">Laser Toning</div>
+      <div class="card-desc">Low-fluence Q-switched laser to fade pigmentation, even skin tone, and restore clarity.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="keravive-brochure.html">
+      <div class="card-num">03</div>
+      <div class="card-title">Luxe Keravive</div>
+      <div class="card-desc">HydraFacial scalp health programme to cleanse follicles, stimulate circulation, and boost hair growth.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="carbon-facial-brochure.html">
+      <div class="card-num">04</div>
+      <div class="card-title">Carbon Facial</div>
+      <div class="card-desc">Laser carbon peel that deeply cleanses, tightens pores, and delivers instant luminosity.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="photo-facial-brochure.html">
+      <div class="card-num">05</div>
+      <div class="card-title">Photo Facial</div>
+      <div class="card-desc">Intense pulsed light therapy targeting pigmentation, redness, and vascular lesions for clearer skin.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#F59E0B">
-      <div class="cat-header">
-        <span class="cat-name">Facial</span>
-        <span class="cat-count">5 Treatments</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="hydrafacial-md-elite-brocher.html">HydraFacial MD Elite</a>
-        <a class="cat-card" href="laser-toning-brochure.html">Laser Toning</a>
-        <a class="cat-card" href="keravive-brochure.html">Luxe Keravive</a>
-        <a class="cat-card" href="carbon-facial-brochure.html">Carbon Facial</a>
-        <a class="cat-card" href="photo-facial-brochure.html">Photo Facial</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Body Contouring</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="emsculpt-neo-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Emsculpt NEO</div>
+      <div class="card-desc">Build muscle and reduce fat simultaneously with high-intensity focused electromagnetic energy.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="lymphatic-drainage-brochure.html">
+      <div class="card-num">02</div>
+      <div class="card-title">Lymphatic Drainage</div>
+      <div class="card-desc">Gentle manual therapy to reduce puffiness, detoxify, and restore natural facial contours.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="exilis-elite-brochure.html">
+      <div class="card-num">03</div>
+      <div class="card-title">Exilis Elite</div>
+      <div class="card-desc">Radiofrequency and ultrasound skin tightening for face and body contouring without surgery.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#10B981">
-      <div class="cat-header">
-        <span class="cat-name">Body Contouring</span>
-        <span class="cat-count">3 Treatments</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="emsculpt-neo-brochure.html">Emsculpt NEO</a>
-        <a class="cat-card" href="lymphatic-drainage-brochure.html">Lymphatic Drainage</a>
-        <a class="cat-card" href="exilis-elite-brochure.html">Exilis Elite</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Face Lifting</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="ultherapy-treatment-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Ultherapy</div>
+      <div class="card-desc">FDA-cleared focused ultrasound to lift brows, chin, and neck without a single incision.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="emface-treatment-brochure.html">
+      <div class="card-num">02</div>
+      <div class="card-title">EmFace</div>
+      <div class="card-desc">Non-invasive facial lifting and muscle toning using synchronized RF and HIFES technology.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#F97316">
-      <div class="cat-header">
-        <span class="cat-name">Face Lifting</span>
-        <span class="cat-count">2 Treatments</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="ultherapy-treatment-brochure.html">Ultherapy</a>
-        <a class="cat-card" href="emface-treatment-brochure.html">EmFace</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Anti Aging</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="morpheus-8-treatment-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Morpheus 8</div>
+      <div class="card-desc">Fractional RF microneedling that remodels deep tissue for dramatic skin tightening and contouring.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="pink-treatment-brochure.html">
+      <div class="card-num">02</div>
+      <div class="card-title">Pink Treatment</div>
+      <div class="card-desc">ISAAC Luxe's signature brightening protocol for a luminous, even-toned complexion.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+    <a class="card" href="dermapen-4-brochure.html">
+      <div class="card-num">03</div>
+      <div class="card-title">Dermapen 4</div>
+      <div class="card-desc">Advanced microneedling that triggers the skin's natural collagen cascade for visible rejuvenation.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#EF4444">
-      <div class="cat-header">
-        <span class="cat-name">Anti Aging</span>
-        <span class="cat-count">3 Treatments</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="morpheus-8-treatment-brochure.html">Morpheus 8</a>
-        <a class="cat-card" href="pink-treatment-brochure.html">Pink Treatment</a>
-        <a class="cat-card" href="dermapen-4-brochure.html">Dermapen 4</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Anti Aging — Hair &amp; Scalp</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="exosome-scalp-treatment-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Exosome Scalp Treatment</div>
+      <div class="card-desc">Next-generation regenerative therapy to restore hair density and revitalise the scalp.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#14B8A6">
-      <div class="cat-header">
-        <span class="cat-name">Anti Aging — Hair &amp; Scalp</span>
-        <span class="cat-count">1 Treatment</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="exosome-scalp-treatment-brochure.html">Exosome Scalp Treatment</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Drip Therapy</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="house-of-drips-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">House of Drips</div>
+      <div class="card-desc">Customised IV infusion therapy delivering vitamins, minerals, and antioxidants directly into the bloodstream.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#3B82F6">
-      <div class="cat-header">
-        <span class="cat-name">Drip Therapy</span>
-        <span class="cat-count">1 Treatment</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="house-of-drips-brochure.html">House of Drips</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Microblading</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="microblading-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Microblading</div>
+      <div class="card-desc">Semi-permanent hair-stroke brow technique for naturally full, perfectly shaped eyebrows.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#EC4899">
-      <div class="cat-header">
-        <span class="cat-name">Microblading</span>
-        <span class="cat-count">1 Treatment</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="microblading-brochure.html">Microblading</a>
-      </div>
-    </div>
+  <div class="cat-heading"><span>Peel</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="house-of-peels-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">House of Peels</div>
+      <div class="card-desc">Expertly curated chemical peels that resurface, brighten, and transform skin texture.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
+  </div>
 
-    <div class="cat-group" style="--cc:#84CC16">
-      <div class="cat-header">
-        <span class="cat-name">Peel</span>
-        <span class="cat-count">1 Treatment</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="house-of-peels-brochure.html">House of Peels</a>
-      </div>
-    </div>
-
-    <div class="cat-group" style="--cc:#06B6D4">
-      <div class="cat-header">
-        <span class="cat-name">Laser Hair Reduction</span>
-        <span class="cat-count">1 Treatment</span>
-      </div>
-      <div class="cat-cards">
-        <a class="cat-card" href="laser-hair-reduction-brochure.html">Laser Hair Reduction</a>
-      </div>
-    </div>
-
+  <div class="cat-heading"><span>Laser Hair Reduction</span></div>
+  <div class="grid cat-grid">
+    <a class="card" href="laser-hair-reduction-brochure.html">
+      <div class="card-num">01</div>
+      <div class="card-title">Laser Hair Reduction</div>
+      <div class="card-desc">Luxurious, painless and permanent hair removal using US FDA approved laser technology.</div>
+      <div class="card-arrow">View Brochure</div>
+    </a>
   </div>
 
   <div class="cat-divider"></div>
