@@ -238,6 +238,60 @@
     @media (min-width: 681px) and (max-width: 900px) {
       .grid { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* ── Quick Search ── */
+    .quick-search {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 24px 4px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .quick-search-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+      min-width: 220px;
+      max-width: 340px;
+    }
+
+    .quick-search-field label {
+      font-family: 'Playfair Display', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gd);
+    }
+
+    .quick-search-field select {
+      background: var(--navy2);
+      color: var(--white);
+      border: 1px solid rgba(200,164,94,0.3);
+      border-radius: 6px;
+      padding: 11px 12px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .quick-search-field select:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    .quick-search-field select:focus {
+      outline: none;
+      border-color: var(--gd);
+    }
+
+    @media (max-width: 680px) {
+      .quick-search { flex-direction: column; align-items: stretch; }
+      .quick-search-field { max-width: none; }
+    }
   </style>
 </head>
 <body>
@@ -258,6 +312,22 @@
     <div class="ticker-item"><div class="ticker-dot"></div>Award Winning</div>
     <div class="ticker-item"><div class="ticker-dot"></div>Celebrity</div>
     <div class="ticker-item"><div class="ticker-dot"></div>20K+ Clients</div>
+  </div>
+
+  <!-- ══ QUICK SEARCH ══ -->
+  <div class="quick-search">
+    <div class="quick-search-field">
+      <label for="categorySelect">Treatment Type</label>
+      <select id="categorySelect">
+        <option value="">All Categories</option>
+      </select>
+    </div>
+    <div class="quick-search-field">
+      <label for="treatmentSelect">Treatment</label>
+      <select id="treatmentSelect" disabled>
+        <option value="">Select a category first</option>
+      </select>
+    </div>
   </div>
 
   <!-- ══ BROWSE BY CATEGORY ══ -->
@@ -777,6 +847,61 @@
   </div>
 
   <footer>© ISAAC Luxe &nbsp;·&nbsp; isaac-luxe.co</footer>
+
+  <script>
+  (function () {
+    var categories = [];
+    document.querySelectorAll('.cat-heading').forEach(function (heading) {
+      var labelEl = heading.querySelector('span');
+      var grid = heading.nextElementSibling;
+      if (!labelEl || !grid || !grid.classList.contains('cat-grid')) return;
+      var treatments = [];
+      grid.querySelectorAll('a.card').forEach(function (card) {
+        var titleEl = card.querySelector('.card-title');
+        if (titleEl) treatments.push({ title: titleEl.textContent.trim(), href: card.getAttribute('href') });
+      });
+      if (treatments.length) categories.push({ name: labelEl.textContent.trim(), treatments: treatments });
+    });
+
+    var categorySelect = document.getElementById('categorySelect');
+    var treatmentSelect = document.getElementById('treatmentSelect');
+
+    categories.forEach(function (cat) {
+      var opt = document.createElement('option');
+      opt.value = cat.name;
+      opt.textContent = cat.name;
+      categorySelect.appendChild(opt);
+    });
+
+    function resetTreatmentSelect(placeholderText, disabled) {
+      treatmentSelect.innerHTML = '';
+      var placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = placeholderText;
+      treatmentSelect.appendChild(placeholder);
+      treatmentSelect.disabled = disabled;
+    }
+
+    categorySelect.addEventListener('change', function () {
+      var selected = categories.find(function (c) { return c.name === categorySelect.value; });
+      if (!selected) {
+        resetTreatmentSelect('Select a category first', true);
+        return;
+      }
+      resetTreatmentSelect('Select a treatment', false);
+      selected.treatments.forEach(function (t) {
+        var opt = document.createElement('option');
+        opt.value = t.href;
+        opt.textContent = t.title;
+        treatmentSelect.appendChild(opt);
+      });
+    });
+
+    treatmentSelect.addEventListener('change', function () {
+      if (treatmentSelect.value) window.location.href = treatmentSelect.value;
+    });
+  })();
+  </script>
 
 </body>
 </html>
