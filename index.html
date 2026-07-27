@@ -1142,7 +1142,7 @@
         var titleEl = card.querySelector('.card-title');
         if (titleEl) treatments.push({ title: titleEl.textContent.trim(), href: card.getAttribute('href') });
       });
-      if (treatments.length) categories.push({ name: labelEl.textContent.trim(), treatments: treatments });
+      if (treatments.length) categories.push({ name: labelEl.textContent.trim(), treatments: treatments, heading: heading, grid: grid });
     });
 
     var categorySelect = document.getElementById('categorySelect');
@@ -1164,10 +1164,26 @@
       treatmentSelect.disabled = disabled;
     }
 
+    function showAllCategories() {
+      categories.forEach(function (cat) {
+        cat.heading.style.display = '';
+        cat.grid.style.display = '';
+      });
+    }
+
+    function showOnlyCategory(name) {
+      categories.forEach(function (cat) {
+        var show = cat.name === name;
+        cat.heading.style.display = show ? '' : 'none';
+        cat.grid.style.display = show ? '' : 'none';
+      });
+    }
+
     categorySelect.addEventListener('change', function () {
       var selected = categories.find(function (c) { return c.name === categorySelect.value; });
       if (!selected) {
         resetTreatmentSelect('Select a category first', true);
+        showAllCategories();
         return;
       }
       resetTreatmentSelect('Select a treatment', false);
@@ -1177,6 +1193,7 @@
         opt.textContent = t.title;
         treatmentSelect.appendChild(opt);
       });
+      showOnlyCategory(selected.name);
     });
 
     treatmentSelect.addEventListener('change', function () {
