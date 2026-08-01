@@ -288,6 +288,58 @@
       border-color: var(--gd);
     }
 
+    .search-bar-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 28px 24px 0;
+    }
+
+    .search-bar-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .search-bar-field label {
+      font-family: 'Playfair Display', serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gd);
+    }
+
+    .search-bar-field input[type="text"] {
+      background: var(--navy2);
+      color: var(--white);
+      border: 1px solid rgba(200,164,94,0.3);
+      border-radius: 6px;
+      padding: 11px 14px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+    }
+
+    .search-bar-field input[type="text"]::placeholder {
+      color: rgba(255,255,255,0.45);
+    }
+
+    .search-bar-field input[type="text"]:focus {
+      outline: none;
+      border-color: var(--gd);
+    }
+
+    .search-no-results {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 8px 24px 0;
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: rgba(255,255,255,0.6);
+      display: none;
+    }
+
     @media (max-width: 680px) {
       .quick-search { flex-direction: column; align-items: stretch; }
       .quick-search-field { max-width: none; }
@@ -313,6 +365,15 @@
     <div class="ticker-item"><div class="ticker-dot"></div>Celebrity</div>
     <div class="ticker-item"><div class="ticker-dot"></div>20K+ Clients</div>
   </div>
+
+  <!-- ══ SEARCH BAR ══ -->
+  <div class="search-bar-wrap">
+    <div class="search-bar-field">
+      <label for="treatmentSearch">Search Treatments</label>
+      <input type="text" id="treatmentSearch" placeholder="e.g. PRP, Botox, Facial, Laser Hair Reduction&hellip;" autocomplete="off">
+    </div>
+  </div>
+  <div class="search-no-results" id="searchNoResults">No treatments match your search.</div>
 
   <!-- ══ QUICK SEARCH ══ -->
   <div class="quick-search">
@@ -1358,6 +1419,8 @@
     }
 
     categorySelect.addEventListener('change', function () {
+      treatmentSearch.value = '';
+      searchNoResults.style.display = 'none';
       var selected = categories.find(function (c) { return c.name === categorySelect.value; });
       if (!selected) {
         resetTreatmentSelect('Select a category first', true);
@@ -1376,6 +1439,48 @@
 
     treatmentSelect.addEventListener('change', function () {
       if (treatmentSelect.value) window.location.href = treatmentSelect.value;
+    });
+
+    // ── Free-text search across every treatment, any category ──
+    var treatmentSearch = document.getElementById('treatmentSearch');
+    var searchNoResults = document.getElementById('searchNoResults');
+
+    treatmentSearch.addEventListener('input', function () {
+      var query = treatmentSearch.value.trim().toLowerCase();
+
+      if (!query) {
+        searchNoResults.style.display = 'none';
+        categories.forEach(function (cat) {
+          cat.grid.querySelectorAll('a.card').forEach(function (card) { card.style.display = ''; });
+        });
+        if (categorySelect.value) {
+          showOnlyCategory(categorySelect.value);
+        } else {
+          showAllCategories();
+        }
+        return;
+      }
+
+      // A live text search overrides the category dropdown so matches surface from every category.
+      categorySelect.value = '';
+      resetTreatmentSelect('Select a category first', true);
+
+      var anyVisible = false;
+      categories.forEach(function (cat) {
+        var anyMatchInCat = false;
+        cat.grid.querySelectorAll('a.card').forEach(function (card) {
+          var titleEl = card.querySelector('.card-title');
+          var descEl = card.querySelector('.card-desc');
+          var text = (titleEl ? titleEl.textContent : '') + ' ' + (descEl ? descEl.textContent : '');
+          var match = text.toLowerCase().indexOf(query) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) { anyMatchInCat = true; anyVisible = true; }
+        });
+        cat.heading.style.display = anyMatchInCat ? '' : 'none';
+        cat.grid.style.display = anyMatchInCat ? '' : 'none';
+      });
+
+      searchNoResults.style.display = anyVisible ? 'none' : 'block';
     });
   })();
   </script>
