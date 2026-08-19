@@ -204,7 +204,7 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .care-col.pre .care-bullet { background:#4caf50; }
 .care-col.post .care-bullet { background:#42a5f5; }
 
-@media print { body{background:white;} .pg{box-shadow:none;margin:0;} }
+@media print { body{background: var(--warm-white, #fdf4f5);} .pg{box-shadow:none;margin:0;} }
 
   /* === ISAAC Company Pages CSS (scoped) === */
   .ipp *, .ipp *::before, .ipp *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -241,6 +241,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
   .ipp .card h4 { font-family: 'Playfair Display', serif; font-size: 0.875rem; color: #0a1628; margin-bottom: 0.3125rem; font-weight: 600; }
   .ipp .card p { font-size: 0.6875rem; color: #8a8a8a; line-height: 1.6; }
   .ipp .cover-divider { width: 6.25rem; height: 0.0625rem; background: linear-gradient(90deg, #c8a45e, transparent); margin: 1.375rem 0; }
+
+
+  /* PDF/print color fidelity: prevent browsers from altering background colors and gradients when printing or exporting to PDF */
+  html, body, .page, .pg, .cover {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  }
 </style>
 </head>
 <body>

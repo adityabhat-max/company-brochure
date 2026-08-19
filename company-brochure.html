@@ -14,6 +14,14 @@
     pointer-events: none !important;
     left: -624.9rem !important; 
 }
+
+
+  /* PDF/print color fidelity: prevent browsers from altering background colors and gradients when printing or exporting to PDF */
+  html, body, .page, .pg, .cover {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  }
 </style>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
@@ -475,7 +483,7 @@
   }
 
   @media print {
-    body { background: white; }
+    body { background: var(--warm-white, #fdf4f5); }
     .page { box-shadow: none; margin: 0; }
   }
 </style>

@@ -601,7 +601,7 @@
   }
 
   @media print {
-  body { background: white; }
+  body { background: var(--warm-white, #fdf4f5); }
   .page { box-shadow: none; margin: 0; page-break-after: always; }
   }
 
@@ -612,6 +612,14 @@
   .loc-card { padding: 1rem; background: #fdf0f2; border-radius: 0.625rem; border: 0.0625rem solid #eae3d8; }
   .loc-card h4 { font-family: 'Playfair Display', serif; font-size: 0.875rem; color: var(--navy); font-weight: 600; margin-bottom: 0.25rem; }
   .loc-card p { font-size: 0.625rem; color: var(--soft-gray); line-height: 1.5; }
+
+
+  /* PDF/print color fidelity: prevent browsers from altering background colors and gradients when printing or exporting to PDF */
+  html, body, .page, .pg, .cover {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  }
 </style>
 </head>
 <body>

@@ -1137,7 +1137,7 @@
   }
 
   @media print {
-    body { background: white; }
+    body { background: var(--warm-white, #fdf4f5); }
     .page { box-shadow: none; margin: 0; }
   }
 
@@ -1175,6 +1175,14 @@
     font-size: 0.625rem;
     color: #666;
     line-height: 1.5;
+  }
+
+
+  /* PDF/print color fidelity: prevent browsers from altering background colors and gradients when printing or exporting to PDF */
+  html, body, .page, .pg, .cover {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
   }
 </style>
 </head>

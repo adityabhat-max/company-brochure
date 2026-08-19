@@ -44,6 +44,14 @@
 .cand-no  .cand-icon:empty::before { content: "\2717"; color: #c62828; }
 .cand-yes .cand-title::before { content: "\2713\0020"; color: #2e7d32; font-weight:600; }
 .cand-no  .cand-title::before { content: "\2717\0020"; color: #c62828; font-weight:600; }
+
+
+  /* PDF/print color fidelity: prevent browsers from altering background colors and gradients when printing or exporting to PDF */
+  html, body, .page, .pg, .cover {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  }
 </style>
 
 <!DOCTYPE html>
@@ -237,6 +245,14 @@ body { background: #f5eced; font-family: 'Montserrat', sans-serif; }
 .cand-no  .cand-icon:empty::before { content: "\2717"; color: #c62828; }
 .cand-yes .cand-title::before { content: "\2713\0020"; color: #2e7d32; font-weight:600; }
 .cand-no  .cand-title::before { content: "\2717\0020"; color: #c62828; font-weight:600; }
+
+
+  /* PDF/print color fidelity: prevent browsers from altering background colors and gradients when printing or exporting to PDF */
+  html, body, .page, .pg, .cover {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
+  }
 </style>
 </head>
 <body>
